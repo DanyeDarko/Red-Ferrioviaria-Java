@@ -1,8 +1,8 @@
-# Red Ferrioviaria Java
+# Red Ferrioviaria Java bullettrain_front bullettrain_side light_rail 
 
 La red ferroviaria se compone de un circuito con dos tramos ferroviarios(ARREGLOS) independientes y cerrados que son recorridos por un conjunto de trenes. En cada tramo los trenes circulan en la misma dirección y a la misma velocidad.
 
-![IDEA DE DISEÑO DE DE RED FERROVIARIA JAVA](https://github.com/DanyeDarko/Red-Ferrioviaria-Java/blob/master/resourses%20repo%20github/redferriovariaDISE%C3%91O.png)
+  ![IDEA DE DISEÑO DE DE RED FERROVIARIA JAVA](https://github.com/DanyeDarko/Red-Ferrioviaria-Java/blob/master  /resourses%20repo%20github/redferriovariaDISE%C3%91O.png)
 
 Cada tramo ferroviario tiene un centro de regulación, en el que los trenes se aparcan
 temporalmente a fin de regular su circulación para que su tráfico sea uniforme. Cuando
@@ -14,8 +14,9 @@ el número de trenes en el tramo.
 
 Para Descargar y desplegar el proyecto Es necesario contar con git ,una terminal o algun cliente git como lo es GitKraken,Plugins en VSC o NETBEANS
 
+
 ```bash
-    $ git clone https://github.com/DanyeDarko/softhHealth.git
+    $ git clone https://github.com/DanyeDarko/Red-Ferrioviaria-Java.git
  ```
 
  ### Pre-requisitos 📋
