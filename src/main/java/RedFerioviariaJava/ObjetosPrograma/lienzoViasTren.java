@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.swing.JPanel;
 
+import RedFerioviariaJava.Hilos.trenHilo;
+
 
 public class lienzoViasTren extends JPanel{
     private int pista[][]={
@@ -26,4 +28,9 @@ public class lienzoViasTren extends JPanel{
         {0,1,1,1,1,1,1,1,1,1,1,1,3,4,3,1,1,1,1,1,1,1,1,1,1,1,0},//14
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };//15
+
+
+    trenHilo TrenesCirculando[]=new trenHilo[8];
+    monitorControlTrenes monitoraControl;
+     
 }
