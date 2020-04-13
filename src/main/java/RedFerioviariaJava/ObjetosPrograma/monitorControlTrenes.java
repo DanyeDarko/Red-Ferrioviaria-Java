@@ -3,11 +3,11 @@ package RedFerioviariaJava.ObjetosPrograma;
 public class monitorControlTrenes {
     static int val=1;
     static int cont;
-    static boolean bol1;
-    static boolean bol2;
-    static boolean bol3;
-    static boolean carros;
-    
+    public static  boolean bol1;
+    public static boolean bol2;
+      public static  boolean bol3;
+      public static  boolean carros;
+
     public synchronized void pasan(int numcirc){                                //Cordina los movimientos para que no choquen
         if(cont==0){
                 cont=numcirc;
