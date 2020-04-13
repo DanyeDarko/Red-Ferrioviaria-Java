@@ -4,9 +4,11 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import RedFerioviariaJava.ObjetosPrograma.lienzoViasTren;
+import RedFerioviariaJava.ObjetosPrograma.monitorControlTrenes;
 
 public class trenHilo extends Thread {
     lienzoViasTren nuevoLienzo;
+    monitorControlTrenes monitoraControl;
     Color color;
     private int vel;
     private int x;
@@ -36,12 +38,12 @@ public class trenHilo extends Thread {
     private boolean cuadro6;
     private boolean cuadro7;
     private boolean cuadro8;
-// <------------- PENDIENTE  PasarCarro pasarCarroClass;
+     
 
-public trenHilo(lienzoViasTren l, Color c, int vel, int x, int y,int opc,int num) {
+public trenHilo(lienzoViasTren l, Color c, int vel, int x, int y,int opc,monitorControlTrenes monitorControl, int num) {
     this.nuevoLienzo = l;
     this.color = c;
-    // this.pasarCarroClass = pc;         //Tiene toda la informacion de la clase "PasarCarros"
+    this.monitoraControl= monitorControl;         //Tiene toda la informacion de la clase "PasarCarros"
     c2=c;
     this.vel = vel;
     this.x = x;
@@ -110,7 +112,7 @@ public void run(){
                         if(y>=350){
                             y-=50;
                             if(x==1250 && y==550){
-                                pasarCarroClass.pasan(1);
+                                monitoraControl.pasan(1);
                                //System.out.println("paso por aqui el carro");
                             }
                             //System.out.println("arriba "+y);
@@ -150,7 +152,7 @@ public void run(){
                                // System.out.println("despertar aqui carro 2");
                                 
                                 //System.out.println(cont);
-                                    pasarCarroClass.despertar();
+                                    monitoraControl.despertar();
                             }
                         }
                         else{
@@ -189,7 +191,7 @@ public void run(){
 
                         }
                     }
-                    if(pasarCarroClass.isBol1()){
+                    if(monitoraControl.isBol1()){
                         //System.out.println(p.isBol1());
                         if(derecha_3){
                             if(x<=1000 && y>=250){
@@ -208,7 +210,7 @@ public void run(){
                                 x-=50;
                                 if(x==950 && y==200){
                                     //System.out.println("dormir aqui carro 1");
-                                    pasarCarroClass.dormir(num);
+                                    monitoraControl.dormir(num);
                                 }
                                 
 
@@ -241,7 +243,7 @@ public void run(){
                                //izquierda=true;
                                cuadro1 = true;
                                derecha_3 = true;
-                               pasarCarroClass.bol1 = false;
+                               monitoraControl.bol1 = false;
                            }
                        }
                     
@@ -262,7 +264,7 @@ public void run(){
                         if(y<=350){
                             y+=50;
                             if(x==50 && y==250){
-                                pasarCarroClass.pasan(2);
+                                monitoraControl.pasan(2);
                             }
                             //System.out.println("arriba "+y);
                         }else{
@@ -300,7 +302,7 @@ public void run(){
                             x+=50;
                             if(x==750 && y==350){
                                // System.out.println("despieta aqui carro 1");
-                                pasarCarroClass.despertar();
+                               monitoraControl.despertar();
                             }
                             //System.out.println("si entra");
                         }
@@ -339,7 +341,7 @@ public void run(){
                             arriba_2=false;
                         }
                     }
-                    if(pasarCarroClass.isBol2()){
+                    if(monitoraControl.isBol2()){
                         if(aa){
                             if(x>=300 && y<=450){
                                 y+=50;
@@ -357,7 +359,7 @@ public void run(){
                                 x+=50;
                                 if(x==350 && y==500){
                                    // System.out.println("dormir aqui carro 2");
-                                    pasarCarroClass.dormir(num);
+                                   monitoraControl.dormir(num);
                                 }
                                 
                                 
@@ -390,7 +392,7 @@ public void run(){
                            cuadro5 = true;
                            //derecha_2=true;
                            aa = true;
-                           pasarCarroClass.bol2 = false;
+                           monitoraControl.bol2 = false;
                        }
                    }
                    
@@ -408,7 +410,7 @@ public void run(){
                         if (y <= 250) {
                             y += 50;
                             if (x == 1250 && y == 250) {
-                                pasarCarroClass.pasan(3);
+                                monitoraControl.pasan(3);
                             }
                         } else {
                             abajo = false;
@@ -436,7 +438,7 @@ public void run(){
                         if (x >= 600 && y < 400) {
                             x -= 50;
                             if (x == 600 && y == 350) {
-                                pasarCarroClass.despertar();
+                                monitoraControl.despertar();
                             }
                         } else {
                             cuadro3 = false;
@@ -468,7 +470,7 @@ public void run(){
                         }
                     }
 
-                    if (pasarCarroClass.isBol3()) {
+                    if (monitoraControl.isBol3()) {
                         if (derecha_3) {
                             if (x <= 1000 && y >= 250) {
                                 y -= 50;
@@ -483,7 +485,7 @@ public void run(){
                             if (x > 850 && y < 250) {
                                 x -= 50;
                                 if (x == 900 && y == 200) {
-                                    pasarCarroClass.dormir(num);
+                                    monitoraControl.dormir(num);
                                 }
                             } else {
                                 izquierda_3 = false;
@@ -509,7 +511,7 @@ public void run(){
                             abajo_3 = false;
                             cuadro1 = true;
                             derecha_3 = true;
-                            pasarCarroClass.bol3 = false;
+                            monitoraControl.bol3 = false;
                         }
                     }  
                    break;                                                        //Caso 3
